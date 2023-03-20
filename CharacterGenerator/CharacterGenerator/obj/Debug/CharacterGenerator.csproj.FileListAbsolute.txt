@@ -8,3 +8,13 @@ C:\Users\krzys\source\repos\CharacterGenerator\CharacterGenerator\obj\Debug\Char
 C:\Users\krzys\source\repos\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.csproj.CoreCompileInputs.cache
 C:\Users\krzys\source\repos\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.exe
 C:\Users\krzys\source\repos\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.pdb
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\bin\Debug\CharacterGenerator.exe.config
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\bin\Debug\CharacterGenerator.exe
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\bin\Debug\CharacterGenerator.pdb
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.csproj.AssemblyReference.cache
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.CharacterGenerator.resources
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.Properties.Resources.resources
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.csproj.GenerateResource.cache
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.csproj.CoreCompileInputs.cache
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.exe
+C:\Users\krzys\Source\Repos\ProgramowanieObiektowe\CharacterGenerator\CharacterGenerator\obj\Debug\CharacterGenerator.pdb

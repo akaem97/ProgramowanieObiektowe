@@ -12,7 +12,7 @@ namespace CharacterGenerator
 {
     public partial class CharacterGenerator : Form
     {
-        int counter = 4;
+        int counter = 10;
 
         Label[] buttonMenu; 
 
