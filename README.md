@@ -15,3 +15,7 @@ Technologia:<br />
 -C# .NET z Windows Forms<br />
 -SQLite<br />
 
+Lista ToDo do 3.04.2023
+-przygotować szielet bazy danych;<br/>
+-sprawdzić IDE;<br/>
+-szkielet aplikacji;<br/>
