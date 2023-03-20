@@ -12,6 +12,6 @@ Założenia<br />
 5.Eksportowanie gotowej karty do PDF;<br />
 
 Technologia:<br />
--C# z Windows Forms<br />
+-C# .NET z Windows Forms<br />
 -SQLite<br />
 
