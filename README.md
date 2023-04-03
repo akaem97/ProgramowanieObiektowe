@@ -15,6 +15,9 @@ Technologia:<br />
 -C# .NET z Windows Forms<br />
 -MySQL<br />
 
+Istotna lektura:
+-git pro book - rozd 1,2
+
 Lista ToDo do 3.04.2023
 -przygotować szielet bazy danych;<br/>
 -sprawdzić IDE;<br/>
