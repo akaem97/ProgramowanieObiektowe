@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 29 Maj 2023, 09:25
+-- Czas generowania: 29 Maj 2023, 09:56
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -38,7 +38,8 @@ CREATE TABLE `armor` (
 --
 
 INSERT INTO `armor` (`armorID`, `armorName`, `armorProtection`) VALUES
-(1, 'testPancerz', 5);
+(1, 'testPancerz', 5),
+(2, 'skórzana kurta', 3);
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,8 @@ CREATE TABLE `equipment` (
 --
 
 INSERT INTO `equipment` (`equipmentID`, `equipmentName`, `equipmentContent`) VALUES
-(1, 'testItem', 'loremIpsum');
+(1, 'testItem', 'loremIpsum'),
+(2, 'mikstura', 'leczy');
 
 -- --------------------------------------------------------
 
@@ -264,7 +266,9 @@ CREATE TABLE `weapon` (
 --
 
 INSERT INTO `weapon` (`weaponID`, `weaponName`, `weaponDamage`) VALUES
-(1, 'testMiecz', 3);
+(1, 'testMiecz', 3),
+(2, 'szabla', 10),
+(3, 'maczuga', 2);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -348,7 +352,7 @@ ALTER TABLE `weapon`
 -- AUTO_INCREMENT dla tabeli `armor`
 --
 ALTER TABLE `armor`
-  MODIFY `armorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `armorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `charactercharacteristics`
@@ -366,7 +370,7 @@ ALTER TABLE `characterinfo`
 -- AUTO_INCREMENT dla tabeli `equipment`
 --
 ALTER TABLE `equipment`
-  MODIFY `equipmentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `equipmentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `relationarmor`
@@ -408,7 +412,7 @@ ALTER TABLE `talents`
 -- AUTO_INCREMENT dla tabeli `weapon`
 --
 ALTER TABLE `weapon`
-  MODIFY `weaponID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `weaponID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
