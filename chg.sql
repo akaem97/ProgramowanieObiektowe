@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 29 Maj 2023, 09:56
+-- Czas generowania: 20 Cze 2023, 22:47
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -32,14 +32,6 @@ CREATE TABLE `armor` (
   `armorName` text NOT NULL,
   `armorProtection` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
---
--- Zrzut danych tabeli `armor`
---
-
-INSERT INTO `armor` (`armorID`, `armorName`, `armorProtection`) VALUES
-(1, 'testPancerz', 5),
-(2, 'skórzana kurta', 3);
 
 -- --------------------------------------------------------
 
@@ -85,19 +77,9 @@ CREATE TABLE `characterinfo` (
   `name` text NOT NULL,
   `race` text NOT NULL,
   `currentProfession` text NOT NULL,
-  `previousProfession` text NOT NULL,
   `age` int(11) NOT NULL,
   `gender` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
---
--- Zrzut danych tabeli `characterinfo`
---
-
-INSERT INTO `characterinfo` (`characterID`, `name`, `race`, `currentProfession`, `previousProfession`, `age`, `gender`) VALUES
-(1, 'testTest', 'testRasa', 'testProfecja', 'testByłaProfesja', 404, 'testGender'),
-(2, 'none', 'noce', 'none', 'none', 1, 'none'),
-(3, 'Tytus', 'Bomba', 'Kapitan', 'cieć', 107, 'M');
 
 -- --------------------------------------------------------
 
@@ -111,15 +93,6 @@ CREATE TABLE `equipment` (
   `equipmentContent` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `equipment`
---
-
-INSERT INTO `equipment` (`equipmentID`, `equipmentName`, `equipmentContent`) VALUES
-(1, 'testItem', 'loremIpsum'),
-(2, 'mikstura', 'leczy');
-
--- --------------------------------------------------------
 
 --
 -- Struktura tabeli dla tabeli `relationarmor`
@@ -131,14 +104,6 @@ CREATE TABLE `relationarmor` (
   `armorID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `relationarmor`
---
-
-INSERT INTO `relationarmor` (`relationArmorID`, `characterID`, `armorID`) VALUES
-(1, 1, 1);
-
--- --------------------------------------------------------
 
 --
 -- Struktura tabeli dla tabeli `relationcharecter`
@@ -151,29 +116,6 @@ CREATE TABLE `relationcharecter` (
   `characteristicsValue` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `relationcharecter`
---
-
-INSERT INTO `relationcharecter` (`ID`, `characterID`, `characteristicsID`, `characteristicsValue`) VALUES
-(1, 1, 2, 0),
-(2, 2, 1, 0),
-(3, 3, 3, 0),
-(4, 1, 1, 14),
-(6, 1, 3, 401),
-(7, 1, 4, 14),
-(8, 1, 5, 43),
-(9, 1, 6, 24),
-(10, 1, 7, 5),
-(11, 1, 8, 2),
-(12, 1, 9, 12),
-(13, 3, 1, 404),
-(14, 1, 13, 534),
-(15, 1, 14, 74),
-(16, 1, 15, 43),
-(17, 1, 16, 32);
-
--- --------------------------------------------------------
 
 --
 -- Struktura tabeli dla tabeli `relationequipment`
@@ -195,19 +137,9 @@ CREATE TABLE `relationequipment` (
 CREATE TABLE `relationtalents` (
   `relationTalentID` int(11) NOT NULL,
   `characterID` int(11) NOT NULL,
-  `talentID` int(11) NOT NULL,
-  `bonus+10` text DEFAULT NULL,
-  `bonus+20` text DEFAULT NULL
+  `talentID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `relationtalents`
---
-
-INSERT INTO `relationtalents` (`relationTalentID`, `characterID`, `talentID`, `bonus+10`, `bonus+20`) VALUES
-(1, 1, 1, 'tak', '');
-
--- --------------------------------------------------------
 
 --
 -- Struktura tabeli dla tabeli `relationweapon`
@@ -219,14 +151,6 @@ CREATE TABLE `relationweapon` (
   `weaponID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `relationweapon`
---
-
-INSERT INTO `relationweapon` (`relationWeaponID`, `characterID`, `weaponID`) VALUES
-(1, 1, 1);
-
--- --------------------------------------------------------
 
 --
 -- Struktura tabeli dla tabeli `talents`
@@ -238,18 +162,6 @@ CREATE TABLE `talents` (
   `talentContent` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `talents`
---
-
-INSERT INTO `talents` (`talentID`, `talentName`, `talentContent`) VALUES
-(1, 'testTalent', 'blablabla'),
-(2, 'test', 'lorem ipsum'),
-(3, 'Pływanie', 'No nie zatoniesz'),
-(4, 'Skakanie', 'Dalszy skok'),
-(5, '34', '4');
-
--- --------------------------------------------------------
 
 --
 -- Struktura tabeli dla tabeli `weapon`
@@ -261,15 +173,7 @@ CREATE TABLE `weapon` (
   `weaponDamage` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `weapon`
---
-
-INSERT INTO `weapon` (`weaponID`, `weaponName`, `weaponDamage`) VALUES
-(1, 'testMiecz', 3),
-(2, 'szabla', 10),
-(3, 'maczuga', 2);
-
+-
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -310,7 +214,6 @@ ALTER TABLE `relationarmor`
 --
 ALTER TABLE `relationcharecter`
   ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `idCharacter` (`characterID`,`characteristicsID`),
   ADD UNIQUE KEY `characterID` (`characterID`,`characteristicsID`);
 
 --
@@ -324,7 +227,7 @@ ALTER TABLE `relationequipment`
 --
 ALTER TABLE `relationtalents`
   ADD PRIMARY KEY (`relationTalentID`),
-  ADD UNIQUE KEY `idCharacter` (`characterID`,`talentID`);
+  ADD UNIQUE KEY `characterID` (`characterID`,`talentID`);
 
 --
 -- Indeksy dla tabeli `relationweapon`
@@ -352,7 +255,7 @@ ALTER TABLE `weapon`
 -- AUTO_INCREMENT dla tabeli `armor`
 --
 ALTER TABLE `armor`
-  MODIFY `armorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `armorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `charactercharacteristics`
@@ -364,7 +267,7 @@ ALTER TABLE `charactercharacteristics`
 -- AUTO_INCREMENT dla tabeli `characterinfo`
 --
 ALTER TABLE `characterinfo`
-  MODIFY `characterID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `characterID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT dla tabeli `equipment`
@@ -382,7 +285,7 @@ ALTER TABLE `relationarmor`
 -- AUTO_INCREMENT dla tabeli `relationcharecter`
 --
 ALTER TABLE `relationcharecter`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=449;
 
 --
 -- AUTO_INCREMENT dla tabeli `relationequipment`
@@ -394,7 +297,7 @@ ALTER TABLE `relationequipment`
 -- AUTO_INCREMENT dla tabeli `relationtalents`
 --
 ALTER TABLE `relationtalents`
-  MODIFY `relationTalentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `relationTalentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT dla tabeli `relationweapon`
@@ -406,7 +309,7 @@ ALTER TABLE `relationweapon`
 -- AUTO_INCREMENT dla tabeli `talents`
 --
 ALTER TABLE `talents`
-  MODIFY `talentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `talentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `weapon`
