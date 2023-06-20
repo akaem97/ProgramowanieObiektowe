@@ -20,9 +20,8 @@ namespace CharacterGeneratorWF
         public Form1()
         {
             InitializeComponent();
-        }
-
-      
+        }    
+              
         public void PobierzCharacterInfo(int idCharakter)
         {            
             int osY = 40;
@@ -444,22 +443,22 @@ namespace CharacterGeneratorWF
                 {
                     using (MySqlCommand command = new MySqlCommand(query2, connection))
                     {
-                        command.Parameters.AddWithValue("@WW", data2[0]);
-                        command.Parameters.AddWithValue("@US", data2[1]);
-                        command.Parameters.AddWithValue("@Kr", data2[2]);
+                        command.Parameters.AddWithValue("@WW",  data2[0]);
+                        command.Parameters.AddWithValue("@US",  data2[1]);
+                        command.Parameters.AddWithValue("@Kr",  data2[2]);
                         command.Parameters.AddWithValue("@Odp", data2[3]);
-                        command.Parameters.AddWithValue("@Zr", data2[4]);
+                        command.Parameters.AddWithValue("@Zr",  data2[4]);
                         command.Parameters.AddWithValue("@Int", data2[5]);
-                        command.Parameters.AddWithValue("@SW", data2[6]);
-                        command.Parameters.AddWithValue("@O", data2[7]);
-                        command.Parameters.AddWithValue("@A", data2[8]);
+                        command.Parameters.AddWithValue("@SW",  data2[6]);
+                        command.Parameters.AddWithValue("@O",   data2[7]);
+                        command.Parameters.AddWithValue("@A",   data2[8]);
                         command.Parameters.AddWithValue("@Żyw", data2[9]);
-                        command.Parameters.AddWithValue("@S", data2[10]);
+                        command.Parameters.AddWithValue("@S",   data2[10]);
                         command.Parameters.AddWithValue("@Wyt", data2[11]);
-                        command.Parameters.AddWithValue("@Sz", data2[12]);
-                        command.Parameters.AddWithValue("@M", data2[13]);
-                        command.Parameters.AddWithValue("@PO", data2[14]);
-                        command.Parameters.AddWithValue("@PP", data2[15]);
+                        command.Parameters.AddWithValue("@Sz",  data2[12]);
+                        command.Parameters.AddWithValue("@M",   data2[13]);
+                        command.Parameters.AddWithValue("@PO",  data2[14]);
+                        command.Parameters.AddWithValue("@PP",  data2[15]);
 
 
                         try

@@ -51,6 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddArmor.cs" />
+    <Compile Include="AddCharacter.cs" />
+    <Compile Include="AddCharacteristics.cs" />
+    <Compile Include="AddEquipment.cs" />
+    <Compile Include="AddTalent.cs" />
+    <Compile Include="AddTalentToCharacter.cs" />
+    <Compile Include="AddWeapon.cs" />
     <Compile Include="ButtonBack.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -58,8 +65,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LabelStyle.cs" />
+    <Compile Include="LookAtTheBeautifulLibrary.cs" />
+    <Compile Include="MiniatureCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowThisBeautifulCharacter.cs" />
+    <Compile Include="SqlConnectionManager.cs" />
+    <Compile Include="SqlDeleteFrom.cs" />
+    <Compile Include="SqlInsertInto.cs" />
+    <Compile Include="SqlSelect.cs" />
+    <Compile Include="TextboxStyle.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
